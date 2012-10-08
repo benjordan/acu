@@ -1,0 +1,15 @@
+@mixin font($family, $face, $size, $weight){
+  font: {
+  	@if $face == serif { family: $family, Georgia, sans-serif; } @else if $face == sans { family: $family, Helvetica, sans-serif; }
+    size: $size;
+    weight: $weight;
+  }
+}
+
+@mixin trans($property, $time, $effect){
+	-webkit-transition: $property $time $effect;
+	   -moz-transition: $property $time $effect;
+        -ms-transition: $property $time $effect;
+         -o-transition: $property $time $effect;
+	        transition: $property $time $effect;
+}
